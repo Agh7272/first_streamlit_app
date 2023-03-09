@@ -86,5 +86,4 @@ if streamlit.button('add a fruit to the list'):
 streamlit.write('Thanks for adding  ', fruit_choice_add)
 
 
-#let the end user add to the table
 
