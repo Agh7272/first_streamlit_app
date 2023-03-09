@@ -35,6 +35,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 
 
 
+
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
@@ -54,3 +55,6 @@ streamlit.dataframe(my_data_rows)
 
 fruit_choice_add = streamlit.text_input('What fruit would you like to add?')
 streamlit.write('Thanks for adding  ', fruit_choice_add)
+
+#let the end user add to the table
+my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit') ")
